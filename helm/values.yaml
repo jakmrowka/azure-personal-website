@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: "#{dockerhub-user}#/#{image_name}#"
+  pullPolicy: Always
+  tag: "latest"
+
+service:
+  type: NodePort
+  port: 31111
+  nodePort: 31111
+  targetPort: 5000
+
+resources: {}
